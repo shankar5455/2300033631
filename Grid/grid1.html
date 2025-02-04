@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid1</title>
+    <style>
+      body{
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: 50px auto 50px;
+        grid-template-areas:
+        "header header header"
+        "leftmenu main rightmenu"
+        "footer footer footer";
+        height: 100vh;
+      }
+      
+      .header{
+        grid-area: header;
+        background-color: rgb(211, 90, 130);
+      }
+      .leftmenu{
+        grid-area: leftmenu;
+        background-color: blue;
+      }
+      .main{
+        grid-area: main;
+        background-color: gold;
+      }
+      .rightmenu{
+        grid-area: rightmenu;
+        background-color: chartreuse;
+      }
+      .footer{
+        grid-area: footer;
+        background-color: aqua;
+      }
+    </style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="leftmenu">LeftMenu</div>
+  <div class="main">Main</div>
+  <div class="rightmenu">RightMenu</div>
+  <div class="footer">Footer</div>
+</body>
+</html>

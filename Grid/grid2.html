@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 50px auto;
+            grid-template-areas:
+            "header header header"
+            "search search right"
+            "left middle right";
+            height: 100vh;
+        }
+        .header, .search, .left, .middle, .right{
+            margin: 2px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .header{
+            grid-area: header;
+            background-color: rgb(211, 90, 130);
+        }
+        .search{
+            grid-area: search;
+            background-color: blue;
+        }
+        .left{
+            grid-area: left;
+            background-color: gold;
+        }
+        .middle{
+            grid-area: middle;
+            background-color: chartreuse;
+        }
+        .right{
+            grid-area: right;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Header</div>
+    <div class="search">Search</div>
+    <div class="left">Left SideBar</div>
+    <div class="middle">Middle SideBar</div>
+    <div class="right">Right SideBar</div>
+</body>
+</html>

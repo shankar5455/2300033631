@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid3</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 70px 200px auto 70px;
+            grid-template-areas:
+            "header header header header"
+            "box1 box2 box3 bar"
+            "main main main bar"
+            "footer footer footer footer";
+            height: 100vh;
+        }
+        .header, .box1, .box2, .box3, .bar, .main, .footer{
+            margin: 10px;
+            text-align: center;
+        }
+        .header{
+            grid-area: header;
+            background-color: rgb(211, 90, 130);
+        }
+        .box1{
+            grid-area: box1;
+            background-color: blue;
+        }
+        .box2{
+            grid-area: box2;
+            background-color: gold;
+        }
+        .box3{
+            grid-area: box3;
+            background-color: chartreuse;
+        }
+        .bar{
+            grid-area: bar;
+            background-color: aqua;
+        }
+        .main{
+            grid-area: main;
+            background-color: rgb(184, 0, 245);
+        }
+        .footer{
+            grid-area: footer;
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Header</div>
+    <div class="box1">Small Box</div>
+    <div class="box2">Small Box</div>
+    <div class="box3">Small Box</div>
+    <div class="bar">SideBar</div>
+    <div class="main">Main content</div>
+    <div class="footer">footer</div>
+</body>
+</html>
